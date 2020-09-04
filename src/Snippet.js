@@ -5,14 +5,14 @@ import './App.css';
 
 
 
-export default function Snippet(props) {
+export default function Snippet({index,item}) {
 
   return (
     <div>
       <Paper className="snippetBox"
-      style={props.index % 2 === 0 ? {float: 'left', backgroundColor: '#6accc3'}: {float : 'right'}}>
+      style={index % 2 === 0 ? {float: 'left', backgroundColor: '#6accc3'}: {float : 'right'}}>
         <Typography component="p">
-          {props.item}
+          {item}
         </Typography>
       </Paper>
     </div>

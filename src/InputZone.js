@@ -5,22 +5,20 @@ import IconButton from '@material-ui/core/IconButton';
 import SendIcon from '@material-ui/icons/Send';
 import './App.css';
 
-export default function InputZone(props) {
+export default function InputZone({ value, handleSubmit, handleChange }) {
   return (
-    <Paper className="root">
+    <Paper className='root'>
       <InputBase
-        className="input"
-        placeholder="Enter Message..."
+        className='input'
+        placeholder='Enter Message...'
         inputProps={{ 'aria-label': 'Enter...' }}
-        value={props.value}
-        onKeyPress={props.handleSubmit}
-        onChange={props.handleChange}
-
+        value={value}
+        onKeyPress={handleSubmit}
+        onChange={handleChange}
       />
-      <IconButton className="iconButton" aria-label="Search">
+      <IconButton className='iconButton' aria-label='Search'>
         <SendIcon />
       </IconButton>
     </Paper>
   );
-};
- 
+}
